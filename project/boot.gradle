@@ -1,0 +1,22 @@
+apply plugin: 'org.springframework.boot'
+
+dependencies {
+    compile group: 'org.springframework.boot', name: 'spring-boot-devtools', version: project.ext.get('spring.boot.version')
+}
+
+bootRun {
+    shouldRunAfter clean, processResources
+    jvmArgs += "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=5005"
+    addResources = true
+}
+
+// Jar should be repackaged by Spring Boot before uploading. We also do not need to preserve the original Jar.
+springBoot {
+    backupSource = false
+}
+
+bootRepackage {
+    excludeDevtools = true // exclude from repackaged archives
+}
+
+uploadArchives.dependsOn bootRepackage

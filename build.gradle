@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+}
+
+plugins {
+    id 'org.springframework.boot'             version '1.5.6.RELEASE' apply false
+    id 'com.querydsl.generator'               version '1.2.2'         apply false
+    id 'com.ewerk.gradle.plugins.querydsl'    version '1.0.9'         apply false
+}
+
+group 'com.datarepublic.simplecab'
+version '1.0-SNAPSHOT'
+description = 'NYC Simple Cab - Parent'
+
+allprojects {
+    repositories {
+        mavenLocal() // for testing only
+        mavenCentral() // for testing only
+        maven { url "http://central.maven.org/maven2/" }
+    }
+}
+
+apply plugin: 'idea'
+apply plugin: 'application'
+
+
+dependencies {
+    compile project(':elements')
+}
+
+

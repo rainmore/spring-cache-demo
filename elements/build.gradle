@@ -1,0 +1,12 @@
+apply from: '../project/assemble.gradle'
+apply from: '../project/logging.gradle'
+apply from: '../project/querydsl.gradle'
+
+dependencies {
+    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: project.ext.get('hibernate.version')
+    compile group: 'org.hibernate', name: 'hibernate-validator',     version: project.ext.get('hibernate.validator.version')
+    compile group: 'org.hibernate', name: 'hibernate-java8',          version: project.ext.get('hibernate.version')
+}
+
+initQuerydslSourcesDir.dependsOn 'clean'
+

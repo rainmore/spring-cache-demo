@@ -1,0 +1,24 @@
+    configurations {
+        compile.exclude module: "spring-boot-starter-tomcat"
+    }
+
+
+    dependencies {
+        compile group: 'org.springframework.boot', name: 'spring-boot-autoconfigure',        version: project.ext.get('spring.boot.version')
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-web',          version: project.ext.get('spring.boot.version')
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-jetty',        version: project.ext.get('spring.boot.version')
+        // comment out actuator and please add cloud aws actuator later (see https://github.com/spring-cloud/spring-cloud-aws/tree/master/spring-cloud-aws-actuator)
+//    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator',     version: project.ext.get('spring.boot.version')
+        // compile group: 'org.springframework.boot', name: 'spring-boot-starter-security',     version: project.ext.get('spring.boot.version')
+        // compile group: 'org.springframework.boot', name: 'spring-boot-starter-thymeleaf',    version: project.ext.get('spring.boot.version')
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa',     version: project.ext.get('spring.boot.version')
+        compile group: 'org.springframework.boot', name: 'spring-boot-starter-logging',      version: project.ext.get('spring.boot.version')
+
+//        compile (group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: project.ext.get('spring.security.oauth2.version')) {
+//            exclude group: 'org.springframework.security' // exclude to prevent duplication
+//        }
+
+        // https://mvnrepository.com/artifact/org.springframework.integration/spring-integration-mail
+//        compile group: 'org.springframework.integration', name: 'spring-integration-mail', version: project.ext.get('spring.integration.version')
+
+    }

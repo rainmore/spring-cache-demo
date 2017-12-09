@@ -1,0 +1,12 @@
+dependencies {
+//    compile group: 'com.google.guava',   name: 'guava',             version: project.ext.get('google.guava.version')
+    compile group: 'org.apache.commons', name: 'commons-lang3',     version: project.ext.get('apache.commons.lang.version')
+//    compile group: 'org.apache.commons', name: 'commons-email',     version: project.ext.get('apache.commons.email.version')
+//    compile group: 'commons-codec',      name: 'commons-codec',     version: project.ext.get('apache.commons.codec.version')
+//    compile group: 'commons-validator',  name: 'commons-validator', version: project.ext.get('apache.commons.validator.version')
+//    compile group: 'commons-io',         name: 'commons-io',        version: project.ext.get('apache.commons.io.version')
+//    compile group: 'org.apache.commons', name: 'commons-csv',       version: project.ext.get('apache.commons.csv.version')
+//    compile group: 'org.bouncycastle',   name: 'bcmail-jdk15on',    version: project.ext.get('bouncycastle.version')
+//    compile group: 'javax.inject',      name: 'javax.inject',       version: '1'
+
+}

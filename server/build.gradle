@@ -1,0 +1,20 @@
+group = rootProject.group
+version = rootProject.version
+description = 'NYC Simple Cab - Server'
+
+apply plugin: 'application'
+
+apply from: '../project/assemble.gradle'
+apply from: '../project/logging.gradle'
+apply from: '../project/common.gradle'
+apply from: '../project/db.gradle'
+apply from: '../project/jackson.gradle'
+apply from: '../project/spring.gradle'
+apply from: '../project/boot.gradle'
+
+
+mainClassName = [group, 'Server'].join('.')
+
+dependencies {
+    compile project(':elements')
+}

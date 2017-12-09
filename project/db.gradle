@@ -1,0 +1,9 @@
+dependencies {
+    compile group: 'mysql',       name: 'mysql-connector-java', version: project.ext.get('mysql.version')
+    compile group: 'com.zaxxer',  name: 'HikariCP',             version: project.ext.get('hikaricp.version')
+
+    compile group: 'org.hibernate', name: 'hibernate-core',          version: project.ext.get('hibernate.version')
+    compile group: 'org.hibernate', name: 'hibernate-java8',          version: project.ext.get('hibernate.version')
+    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: project.ext.get('hibernate.version')
+    compile group: 'org.hibernate', name: 'hibernate-validator',     version: project.ext.get('hibernate.validator.version')
+}

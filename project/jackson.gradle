@@ -1,0 +1,10 @@
+dependencies {
+    compile group: 'com.fasterxml.jackson.core',     name: 'jackson-core',                version: project.ext.get('jackson.version')
+    compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jdk8',       version: project.ext.get('jackson.version')
+    compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310',     version: project.ext.get('jackson.version')
+    compile group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-hibernate5', version: project.ext.get('jackson.version')
+
+    if (getPlugins().hasPlugin('scala')) {
+        compile group: 'com.fasterxml.jackson.module', name: sclArt('jackson-module-scala'),  version: project.ext.get('jackson.version')
+    }
+}

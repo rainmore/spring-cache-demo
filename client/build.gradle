@@ -1,0 +1,22 @@
+group = rootProject.group
+version = rootProject.version
+description = 'NYC Simple Cab - Client'
+
+apply plugin: 'application'
+
+apply from: '../project/assemble.gradle'
+apply from: '../project/logging.gradle'
+apply from: '../project/common.gradle'
+apply from: '../project/jackson.gradle'
+apply from: '../project/boot.gradle'
+
+
+mainClassName = [group, 'Client'].join('.')
+
+dependencies {
+    compile project(':elements')
+    compile group: 'org.springframework.boot', name: 'spring-boot-autoconfigure',        version: project.ext.get('spring.boot.version')
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-jetty',        version: project.ext.get('spring.boot.version')
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web',          version: project.ext.get('spring.boot.version')
+}
+
