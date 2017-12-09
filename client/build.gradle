@@ -15,8 +15,6 @@ mainClassName = [group, 'Client'].join('.')
 
 dependencies {
     compile project(':elements')
-    compile group: 'org.springframework.boot', name: 'spring-boot-autoconfigure',        version: project.ext.get('spring.boot.version')
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-jetty',        version: project.ext.get('spring.boot.version')
     compile group: 'org.springframework.boot', name: 'spring-boot-starter-web',          version: project.ext.get('spring.boot.version')
 }
 

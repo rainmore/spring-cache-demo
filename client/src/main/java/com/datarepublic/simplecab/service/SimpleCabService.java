@@ -23,13 +23,6 @@ public class SimpleCabService {
     private static final String CAB_TRIP_DATA_REQUEST_TEMPLATE =
             "http://localhost:8080/api/simple-cab/medallionId/%s/pickupDate/%s/ignoreCache/%s";
 
-    private ObjectMapper objectMapper;
-
-    @Inject
-    public SimpleCabService(ObjectMapper objectMapper) {
-        this.objectMapper = objectMapper;
-    }
-
     public List<CabTripData> getMedallionsSummary(String[] medallions, LocalDate pickupDate) {
         return getMedallionsSummary(medallions, pickupDate, false);
     }
