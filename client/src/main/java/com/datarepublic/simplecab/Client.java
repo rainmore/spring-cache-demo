@@ -63,10 +63,11 @@ public class Client {
     }
 
     public void processRequest(SimpleCabService simpleCabService, Boolean ignoreCache) {
-        String[] medallions = new String[] {"00FD1D146C1899CEDB738490659CAD30"};
+        String medallineId = "00FD1D146C1899CEDB738490659CAD30";
+        String[] medallions = new String[] {medallineId};
         LocalDate localDate = LocalDate.of(2013, 12, 31);
         List<CabTripData> data = simpleCabService.getMedallionsSummary(medallions, localDate, ignoreCache);
-        logger.info(String.format("Request: medallions: %s, localDate: %s, ignoreCache: %s", medallions, localDate, ignoreCache));
+        logger.info(String.format("Request: medallions: %s, localDate: %s, ignoreCache: %s", medallineId, localDate, ignoreCache));
         logger.info(String.format("Response: %s", data.size()));
     }
 }
