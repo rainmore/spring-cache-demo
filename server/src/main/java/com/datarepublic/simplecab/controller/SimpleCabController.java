@@ -9,7 +9,7 @@ import javax.inject.Inject;
 import java.time.LocalDate;
 
 @RestController
-@RequestMapping("/api/simple-cab")
+@RequestMapping("/api/v1/simple-cab")
 public class SimpleCabController {
 
     private final SimpleCabService simpleCabService;

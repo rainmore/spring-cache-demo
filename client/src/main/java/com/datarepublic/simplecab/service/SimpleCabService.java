@@ -21,7 +21,7 @@ public class SimpleCabService {
     private static final Logger logger = LoggerFactory.getLogger(SimpleCabService.class);
 
     private static final String CAB_TRIP_DATA_REQUEST_TEMPLATE =
-            "http://localhost:8080/api/simple-cab/medallionId/%s/pickupDate/%s/ignoreCache/%s";
+            "http://localhost:8080/api/v1/simple-cab/medallionId/%s/pickupDate/%s/ignoreCache/%s";
 
     public List<CabTripData> getMedallionsSummary(String[] medallions, LocalDate pickupDate) {
         return getMedallionsSummary(medallions, pickupDate, false);
